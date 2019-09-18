@@ -1,0 +1,9 @@
+<div class="content">
+  <div *ngIf="items.length" id="galleryList">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of items">
+        <div class="card fruitCard" [ngStyle]="{'background-image':'url(' + item.imageUrl + ')'}">
+      </div>
+    </div>
+  </div>
+</div>

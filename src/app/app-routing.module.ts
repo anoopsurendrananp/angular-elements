@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'manage-files',
     component: ManageFileComponent
+  },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./gallery/gallery.module').then(m => m.GalleryModule)
   }
 ];
 
