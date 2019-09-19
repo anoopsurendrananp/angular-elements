@@ -1,3 +1,6 @@
+$darkgray: #495057;
+$white: #fff;
+
 :host {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -81,12 +84,12 @@
 
 #galleryList {
   .card {
-    margin: 30px;
+    margin-bottom: 30px;
   }
 
   .fruitCard {
     border: none;
-    min-height: 200px;
+    min-height: 250px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -109,7 +112,36 @@
     &:hover {
       ms-transform: scale(1.5); /* IE 9 */
       -webkit-transform: scale(1.5); /* Safari 3-8 */
-      transform: scale(1.5);
+      transform: scale(1.2);
+      .info {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+    color: $white;
+
+    .info {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .title {
+      margin: 0 !important;
+    }
+
+    .description {
+      font-style: italic;
+      font-size: 10px;
+      margin: 0;
+      text-shadow: 4px 4px 4px $darkgray;
     }
   }
 }
