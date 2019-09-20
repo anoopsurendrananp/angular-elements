@@ -1,0 +1,25 @@
+<div class="content">
+  <div *ngIf="contents.length" id="galleryList">
+    <div class="row">
+      <div class="col-md-2"
+        *ngFor="let content of contents | paginate: { itemsPerPage: limit, currentPage: current, totalItems: total }">
+        <div class="card fruitCard" [ngStyle]="{'background-image':'url(' + content.imageUrl + ')'}">
+          <div class="card-body">
+            <div class="info">
+              <div class="mt-3 m-0 p-0">
+                <div class="text-center">
+                  <h4 class="title">{{content.name}}</h4>
+                  <span class="description"> {{content.scientificName}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="float-right">
+      <pagination-controls class="pagination" maxSize="5" responsive="true" previousLabel="" nextLabel=""
+        (pageChange)="pageClick($event)" screenReaderCurrentLabel="You're on page"></pagination-controls>
+    </div>
+  </div>
+</div>

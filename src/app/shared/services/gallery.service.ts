@@ -262,8 +262,16 @@ export class GalleryService {
 
   constructor() { }
 
-  getFruits() {
-    return this.fruits;
+  getFruits(index, limit) {
+    let content = this.fruits.slice(index * limit, (index + 1) * limit);
+    const response = {
+      status: true,
+      data: {
+        items: content,
+        total: this.fruits.length
+      }
+    };
+    return response;
   }
 
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GalleryService } from '../shared/services/gallery.service';
 
 @Component({
   selector: 'app-gallery',
@@ -8,18 +7,11 @@ import { GalleryService } from '../shared/services/gallery.service';
 })
 export class GalleryComponent implements OnInit {
 
-  items: any = [];
-  spot = 'assets/images/fruits/apples.jpg';
-
-  constructor(private galleryService: GalleryService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getItems()
-  }
-
-  getItems() {
-    this.items = this.galleryService.getFruits();
-    console.log('INFO', this.items);
   }
 
 }
+
+
