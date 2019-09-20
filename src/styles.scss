@@ -1,3 +1,4 @@
+$primary: #044F67;
 $darkgray: #495057;
 $white: #fff;
 
@@ -17,10 +18,9 @@ $white: #fff;
 .toolbar {
   height: 60px;
   overflow: hidden;
-  // margin: -8px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background-color: $primary;
 
   img {
     margin: 0 16px;
@@ -137,11 +137,26 @@ $white: #fff;
       margin: 0 !important;
     }
 
-    .description {
+    ul li {
+      display: inline-block;
+      font-size: 14px;
       font-style: italic;
-      font-size: 10px;
-      margin: 0;
-      text-shadow: 4px 4px 4px $darkgray;
+
+      a {
+        text-decoration: none;
+        font-style: normal;
+        cursor: pointer;
+      }
+
+      i {
+        font-size: 16px;
+      }
     }
+  }
+}
+
+.ngx-pagination { 
+  .current {
+    background: $primary !important;
   }
 }

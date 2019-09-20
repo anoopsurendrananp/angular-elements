@@ -6,12 +6,15 @@
         <div class="card fruitCard" [ngStyle]="{'background-image':'url(' + content.imageUrl + ')'}">
           <div class="card-body">
             <div class="info">
-              <div class="mt-3 m-0 p-0">
-                <div class="text-center">
+              <div class="text-center">
                   <h4 class="title">{{content.name}}</h4>
-                  <span class="description"> {{content.scientificName}}</span>
-                </div>
               </div>
+              <ul class="mt-3 m-0 p-0 d-flex justify-content-between align-items-center">
+                <li><i class="fa fa-info-circle" aria-hidden="true"></i> {{content.scientificName}}</li>
+                <li>
+                  <a> <i class="fa fa-home" aria-hidden="true"></i> View </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -19,7 +22,7 @@
     </div>
     <div class="float-right">
       <pagination-controls class="pagination" maxSize="5" responsive="true" previousLabel="" nextLabel=""
-        (pageChange)="pageClick($event)" screenReaderCurrentLabel="You're on page"></pagination-controls>
+        (pageChange)="pageClick($event)"></pagination-controls>
     </div>
   </div>
 </div>

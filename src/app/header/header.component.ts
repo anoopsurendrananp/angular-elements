@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   tooltipOptions = {
-    placement: 'bottom',
+    placement: 'left',
     theme: 'light'
   }
 
